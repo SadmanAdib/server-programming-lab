@@ -1,0 +1,1 @@
+We are learning JS.We are also learning NodeJSIs this a synchronous process?Is this a synchronous process?
