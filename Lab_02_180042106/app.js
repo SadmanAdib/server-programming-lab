@@ -4,7 +4,7 @@ const userRoutes = require("./routes/userRoutes.routes");
 
 app.use(userRoutes); 
 app.get("/", (req, res) => {
-    res.send("<H1>Home Page</H1>");
+    res.sendFile("home.html", {root: "./views"});
 });
 
 module.exports = app;
