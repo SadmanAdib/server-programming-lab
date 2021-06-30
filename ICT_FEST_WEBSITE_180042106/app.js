@@ -6,6 +6,9 @@ app.use(express.static("public"));
 //View engine notified that ejs being used
 app.set("view engine", "ejs");
 
+//Body Parser
+app.use(express.urlencoded({ extended: false }));
+
 //Routes
 const indexRoutes = require("./routes/index.routes");
 const userRoutes = require("./routes/users.routes");
