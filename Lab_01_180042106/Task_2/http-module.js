@@ -5,7 +5,7 @@ const contents = require("./loadContents");
 const server = http.createServer((req, res) => 
 {
     if (req.url == "/")
-    {
+    {  
         res.write(contents.indexPage);
         res.end();
     }
