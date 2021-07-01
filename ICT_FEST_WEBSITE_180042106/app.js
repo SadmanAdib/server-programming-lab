@@ -1,7 +1,17 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const session = require("express-session");// 
 const flash = require("connect-flash");
+const mongoose = require("mongoose");
+
+//Connect to DB
+mongoose.connect(process.env.MongoURI,{useNewUrlParser:true, useUnifiedTopology:true}).then(()=>{
+    console.log("Connected to Database!")
+}).catch((error) => {
+    console.log(error);
+});
+
 
 //Static Resources
 app.use(express.static("public"));
